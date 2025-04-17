@@ -429,75 +429,82 @@ img {
 
 
 
-/* 页面服务模块样式 */
-.services-page-section {
-  padding: 80px 60px;
-  background: linear-gradient(to bottom, #e4f4ff, #fff);
-}
-
-.section-title {
+/* 标题区域 */
+.section-title-area {
   text-align: center;
-  font-size: 38px;
-  margin-bottom: 60px;
+  padding: 60px 20px 30px;
+  background: linear-gradient(to right, #d8eefe, #fbe4ec);
   color: #003366;
 }
 
-.services-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 40px;
+.section-title-area h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
-.service-box {
-  width: 22%;
-  background: white;
+.section-title-area p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 服务模块展示 */
+.service-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px;
+  background-color: #ffffff;
+}
+
+.service-card {
+  width: 260px;
+  background: #ffffff;
   border-radius: 20px;
-  text-align: center;
   padding: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
-.service-box:hover {
-  transform: translateY(-8px);
+.service-card:hover {
+  transform: translateY(-10px);
 }
 
-.service-label {
-  background: linear-gradient(to right, #69bff8, #fba0d0);
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.service-box img {
+.service-card img {
   width: 100%;
-  height: 150px;
+  height: 160px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.service-box p {
-  margin: 15px 0;
+.service-tag {
+  background: linear-gradient(to right, #5eb9f0, #f3a6c8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.service-card p {
   font-size: 15px;
   color: #444;
+  margin: 15px 0;
 }
 
 .service-btn {
   display: inline-block;
-  background: #69bff8;
+  background: #5eb9f0;
   color: white;
-  padding: 8px 16px;
+  padding: 8px 20px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 .service-btn:hover {
-  background: #4aa9e0;
+  background: #3fa2dd;
 }
-
