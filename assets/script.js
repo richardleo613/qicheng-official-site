@@ -1,20 +1,22 @@
-// 🌍 中英文切换功能
+// 设置语言并存储到 localStorage
 function setLanguage(lang) {
-  const elements = document.querySelectorAll('[data-en]');
-  elements.forEach(el => {
-    el.innerText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
-  });
+  localStorage.setItem("preferredLang", lang);
+  applyLanguage(lang);
 }
 
-// 页面加载时默认切换为中文 + 启动轮播
+// 页面加载时自动应用 localStorage 中保存的语言
 window.onload = function () {
-  const elements = document.querySelectorAll('[data-en]');
-  elements.forEach(el => {
-    el.innerText = el.getAttribute('data-zh');
-  });
-
-  initCarousel();
+  const savedLang = localStorage.getItem("preferredLang") || "zh";
+  applyLanguage(savedLang);
 };
+
+// 语言切换逻辑：遍历所有支持切换的标签
+function applyLanguage(lang) {
+  const elements = document.querySelectorAll("[data-en]");
+  elements.forEach(el => {
+    el.innerText = el.getAttribute(`data-${lang}`);
+  });
+}
 
 // 🎠 无限正向轮播图逻辑
 let currentIndex = 0;
