@@ -119,8 +119,8 @@ nav.nav-center a:hover {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: auto; /* 自动根据图片撑开高度 */
-  max-height: 600px;
+  height: 300px;
+  margin-bottom: 2rem;
 }
 
 .carousel-track {
@@ -130,9 +130,8 @@ nav.nav-center a:hover {
 
 .carousel-track img {
   width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: contain; /* 图片完整显示，不裁切 */
+  height: 300px;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
