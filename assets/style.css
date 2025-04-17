@@ -372,23 +372,33 @@ img {
 }
 
 .service-header .arrow {
-  font-size: 1rem;
-  background-color: white;
-  color: #0c2c55;
-  width: 26px;
-  height: 26px;
-  line-height: 26px;
-  text-align: center;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  font-weight: bold;
-  display: inline-block;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.service-header .arrow::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #0c2c55;
+  border-right: 2px solid #0c2c55;
+  transform: rotate(45deg);
 }
 
 .service-header .arrow:hover {
   background-color: #e6f2ff;
   transform: scale(1.1);
 }
+
 
 .service-card img {
   width: 100%;
