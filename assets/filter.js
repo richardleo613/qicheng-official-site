@@ -1,55 +1,45 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const lang = localStorage.getItem("lang") || "zh";
-    setLanguage(lang);
-  
-    const menuTitles = document.querySelectorAll(".menu-title.expandable");
-    const menuItems = document.querySelectorAll(".submenu li");
+document.addEventListener("DOMContentLoaded", () => {
     const image = document.getElementById("service-image");
+    const expandableMenus = document.querySelectorAll(".menu-title.expandable");
+    const submenuItems = document.querySelectorAll(".submenu li");
   
-    // 展开/折叠菜单绑定
-    menuTitles.forEach(title => {
-      title.addEventListener("click", function () {
-        const submenu = this.nextElementSibling;
-        if (submenu && submenu.classList.contains("submenu")) {
-          const isOpen = submenu.style.display === "block";
-          submenu.style.display = isOpen ? "none" : "block";
+    // 一级菜单展开/收起
+    expandableMenus.forEach(menu => {
+      menu.addEventListener("click", () => {
+        const submenu = menu.nextElementSibling;
+        if (!submenu) return;
   
-          // 箭头方向
-          if (isOpen) {
-            this.classList.remove("open");
-          } else {
-            this.classList.add("open");
-          }
-        }
+        const isOpen = submenu.style.display === "block";
+        submenu.style.display = isOpen ? "none" : "block";
+        menu.classList.toggle("open", !isOpen);
       });
     });
   
-    // 国家项点击切换图片 + 高亮
-    menuItems.forEach(item => {
+    // 点击国家：切换图片 + 高亮
+    submenuItems.forEach(item => {
       item.addEventListener("click", () => {
-        const type = item.getAttribute("data-type");
-        const region = item.getAttribute("data-region");
-        const imagePath = `images/${type}-${region}.jpg`;
+        const type = item.dataset.type;
+        const region = item.dataset.region;
+        const imgPath = `images/${type}-${region}.jpg`;
   
-        image.src = imagePath;
-        image.alt = `${type} - ${region}`;
+        image.src = imgPath;
+        image.alt = `${type}-${region}`;
   
-        // 高亮
-        menuItems.forEach(i => i.classList.remove("active"));
+        submenuItems.forEach(i => i.classList.remove("active"));
         item.classList.add("active");
       });
     });
   
-    // 切换语言时更新所有元素
+    // 语言切换功能
     window.setLanguage = function (lang) {
-      const elements = document.querySelectorAll("[data-en][data-zh]");
-      elements.forEach(el => {
+      const all = document.querySelectorAll("[data-en][data-zh]");
+      all.forEach(el => {
         el.textContent = el.getAttribute(`data-${lang}`);
       });
   
-      const countryItems = document.querySelectorAll(".submenu li");
-      countryItems.forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
+      const countries = document.querySelectorAll(".submenu li");
+      countries.forEach(li => {
+        li.textContent = li.getAttribute(`data-${lang}`);
       });
   
       localStorage.setItem("lang", lang);
@@ -60,5 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const menu = document.getElementById("langMenu");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     };
+  
+    // 初始语言应用
+    const savedLang = localStorage.getItem("lang") || "zh";
+    setLanguage(savedLang);
   });
   

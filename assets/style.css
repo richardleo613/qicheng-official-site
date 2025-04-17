@@ -675,7 +675,6 @@ nav.nav-center a.active {
   right: 4px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 0.8rem;
   transition: transform 0.3s ease;
 }
 
@@ -685,6 +684,5 @@ nav.nav-center a.active {
 
 .submenu {
   display: none;
-  margin-left: 1rem;
-  padding-left: 0;
 }
+

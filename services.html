@@ -19,7 +19,7 @@
     <a href="services.html" class="active" data-en="Services" data-zh="服务">Services</a>
     <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
   </nav>
-  <div class="lang-dropdown" onclick="toggleLangMenu()">
+  <div class="lang-dropdown" id="langToggle">
     <span class="lang-icon">&#127760;</span>
     <div class="lang-menu" id="langMenu">
       <div onclick="setLanguage('zh')">中文</div>
@@ -33,10 +33,9 @@
   <!-- 左侧菜单 -->
   <aside class="sidebar">
     <ul class="menu">
-
-      <!-- 公司注册：可展开 -->
+      <!-- 公司注册 -->
       <li>
-        <div class="menu-title expandable" onclick="toggleSubmenu(this)" data-en="Company Registration" data-zh="公司注册">公司注册</div>
+        <div class="menu-title expandable" data-en="Company Registration" data-zh="公司注册">公司注册</div>
         <ul class="submenu">
           <li data-type="register" data-region="indonesia" data-zh="印尼" data-en="Indonesia">印尼</li>
           <li data-type="register" data-region="malaysia" data-zh="马来西亚" data-en="Malaysia">马来西亚</li>
@@ -48,21 +47,14 @@
         </ul>
       </li>
 
-      <!-- 其他服务暂不展开 -->
-      <li>
-        <div class="menu-title" data-en="Visa Services" data-zh="签证业务">签证业务</div>
-      </li>
-      <li>
-        <div class="menu-title" data-en="Industry Qualifications" data-zh="行业资质">行业资质</div>
-      </li>
-      <li>
-        <div class="menu-title" data-en="Tax Consulting" data-zh="财税咨询">财税咨询</div>
-      </li>
-
+      <!-- 其他业务 -->
+      <li><div class="menu-title" data-en="Visa Services" data-zh="签证业务">签证业务</div></li>
+      <li><div class="menu-title" data-en="Industry Qualifications" data-zh="行业资质">行业资质</div></li>
+      <li><div class="menu-title" data-en="Tax Consulting" data-zh="财税咨询">财税咨询</div></li>
     </ul>
   </aside>
 
-  <!-- 右侧图片展示 -->
+  <!-- 右侧展示图片 -->
   <section class="content-display">
     <img id="service-image" src="images/service-default.jpg" alt="服务首页图">
   </section>
