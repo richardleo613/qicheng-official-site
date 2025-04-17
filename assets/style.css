@@ -332,7 +332,7 @@ img {
 }
 
 .section-title {
-  background: var(--primary);
+  background: none;   /* ❌ 去掉背景色 */
   padding: 3rem 1.5rem;
   text-align: center;
 }
