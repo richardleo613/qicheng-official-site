@@ -342,11 +342,11 @@ img {
 .service-card {
   width: 22%;
   min-width: 220px;
-  border: 2px solid var(--accent); /* 添加统一边框颜色 */
-  border-radius: 0px;              /* 去圆角 */
+  border: none;
+  border-radius: 0;
   overflow: hidden;
   transition: transform 0.3s ease;
-  background-color: #e6f2ff;       /* 替代渐变为纯浅蓝色 */
+  background-color: transparent;
 }
 
 .service-card:hover {
@@ -363,16 +363,17 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e6f2ff; /* 纯色浅蓝 */
-  color: #333;
+  background-color: #0c2c55; /* 深蓝色 */
+  color: #fff;
   padding: 0.75rem 1rem;
   font-weight: 600;
   font-size: 1rem;
-  border-bottom: 2px solid var(--accent);
+  margin-bottom: 0.5rem; /* 让它和图片之间有间距 */
 }
 
 .service-header .arrow {
   font-size: 1.2rem;
+  color: #fff;
 }
 
 .service-card img {
@@ -380,6 +381,7 @@ img {
   height: 160px;
   object-fit: cover;
   display: block;
+  border: none;
 }
 
 /* 手机端适配 */
