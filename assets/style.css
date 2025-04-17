@@ -7,15 +7,6 @@
   --footer-bg: linear-gradient(to right, #0c2c55, #ffe4f0);  /* 深蓝渐变到粉色 */
 }
 
-:root {
-  --primary: #e6f2ff;
-  --accent: #ffe4f0;
-  --text: #333;
-  --bg: #ffffff;
-  --link-hover: #66b3ff;
-  --footer-bg: linear-gradient(to right, #dff1ff, #fce6ef);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -38,10 +29,18 @@ header {
   flex-wrap: wrap;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
+.logo img {
+  height: 60px;
+  display: block;
 }
+
+.logo div {
+  background-color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 让 logo 浮起来 */
+}
+
 
 nav a {
   margin-left: 1.5rem;
