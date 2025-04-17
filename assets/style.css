@@ -428,6 +428,51 @@ img {
 
 
 
+/* 通用容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 顶部导航栏 */
+.header {
+  background: linear-gradient(to right, #d8eefe, #fbe4ec);
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* logo */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* 菜单导航 */
+.navbar a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #003366;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #f36b9b;
+}
+
+.navbar a.active {
+  color: #f36b9b;
+  border-bottom: 2px solid #f36b9b;
+}
 
 /* 标题区域 */
 .section-title-area {
