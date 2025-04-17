@@ -342,11 +342,11 @@ img {
 .service-card {
   width: 22%;
   min-width: 220px;
-  border-radius: 10px;
+  border: 2px solid var(--accent); /* 添加统一边框颜色 */
+  border-radius: 0px;              /* 去圆角 */
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
-  background-color: #fff;
+  background-color: #e6f2ff;       /* 替代渐变为纯浅蓝色 */
 }
 
 .service-card:hover {
@@ -363,11 +363,12 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #e6f2ff, #ffe4f0);
-  color: white;
+  background-color: #e6f2ff; /* 纯色浅蓝 */
+  color: #333;
   padding: 0.75rem 1rem;
   font-weight: 600;
   font-size: 1rem;
+  border-bottom: 2px solid var(--accent);
 }
 
 .service-header .arrow {
