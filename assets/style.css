@@ -565,3 +565,129 @@ nav.nav-center a.active {
 .lang-menu div:hover {
   background-color: var(--primary);
 }
+/* ===== 服务页整体布局 ===== */
+.services-page {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+/* ===== 左侧筛选栏 ===== */
+.filter-sidebar {
+  width: 260px;
+  background: #f9faff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.filter-sidebar h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--primary-dark, #2b3366);
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.filter-group ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.filter-group li {
+  margin-bottom: 6px;
+}
+
+.filter-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* ===== 右侧服务展示区 ===== */
+.service-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== 服务卡片样式 ===== */
+.service-card {
+  background: linear-gradient(145deg, #e3f0ff, #fce4f4);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+  padding: 16px 20px;
+}
+
+.card-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.card-content .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--primary, #4361ee);
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.card-content .btn:hover {
+  background: #3a4fcc;
+}
+
+/* ===== 响应式布局（移动端） ===== */
+@media screen and (max-width: 768px) {
+  .services-page {
+    flex-direction: column;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
