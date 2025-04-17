@@ -363,7 +363,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #66b3ff, #ffb3c6);
+  background: linear-gradient(to right, #e6f2ff, #ffe4f0);
   color: white;
   padding: 0.75rem 1rem;
   font-weight: 600;
