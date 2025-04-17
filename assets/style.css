@@ -669,10 +669,6 @@ nav.nav-center a.active {
   padding-right: 20px;
 }
 
-.menu-title.expandable.open::after {
-  transform: translateY(-50%) rotate(180deg);
-}
-
 .menu-title.expandable::after {
   content: '▾';
   position: absolute;
@@ -683,15 +679,12 @@ nav.nav-center a.active {
   transition: transform 0.3s ease;
 }
 
-/* === 子菜单初始默认隐藏，可通过JS控制显示 === */
-.submenu {
-  display: none;
-  margin: 0.5rem 0 1.2rem 1rem;
-  padding-left: 0;
+.menu-title.expandable.open::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
-/* === 子菜单列表项激活状态高亮 === */
-.submenu li.active {
-  background-color: var(--link-hover);
-  color: white;
+.submenu {
+  display: none;
+  margin-left: 1rem;
+  padding-left: 0;
 }
