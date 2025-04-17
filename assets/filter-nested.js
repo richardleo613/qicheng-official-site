@@ -46,11 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("lang", lang);
   };
 
-  // ===== 切换语言菜单显示 =====
-  window.toggleLangMenu = function () {
-    const menu = document.getElementById("langMenu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  };
+// 切换语言菜单的展开与隐藏
+window.toggleLangMenu = function () {
+  const menu = document.getElementById("langMenu");
+  if (menu) {
+    const current = window.getComputedStyle(menu).display;
+    menu.style.display = current === "block" ? "none" : "block";
+  }
+};
 
   // ===== 页面初始化语言状态 =====
   const savedLang = localStorage.getItem("lang") || "zh";
