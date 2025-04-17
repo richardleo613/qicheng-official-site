@@ -95,3 +95,16 @@ function initCarousel() {
 
   resetAutoSlide();
 }
+
+function toggleLangMenu() {
+  const menu = document.getElementById("langMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+window.addEventListener("click", function (e) {
+  const dropdown = document.querySelector(".lang-dropdown");
+  const menu = document.getElementById("langMenu");
+  if (!dropdown.contains(e.target)) {
+    menu.style.display = "none";
+  }
+});
