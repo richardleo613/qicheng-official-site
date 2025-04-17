@@ -10,11 +10,7 @@
 
   <!-- Header -->
   <header>
-    <a href="index.html" class="logo">
-      <div style="background-color: white; padding: 6px 12px; border-radius: 8px; display: inline-block;">
-        <img src="images/logo.jpg" alt="Qicheng Logo" style="height: 60px;" />
-      </div>
-    </a>      
+    <div class="logo" data-en="QICHENG" data-zh="启程">QICHENG</div>
     <nav>
       <a href="index.html" data-en="Home" data-zh="首页">Home</a>
       <a href="services.html" data-en="Services" data-zh="服务">Services</a>
@@ -23,7 +19,7 @@
     </nav>
   </header>
 
-  <!-- Hero: Image Carousel -->
+  <!-- Hero Carousel -->
   <section class="carousel">
     <div class="carousel-track" id="carousel-track">
       <img src="images/banner1.jpg" alt="Banner 1">
@@ -31,69 +27,86 @@
       <img src="images/banner3.jpg" alt="Banner 3">
       <img src="images/banner1.jpg" alt="Cloned Slide" class="clone">
     </div>
+    <!-- Arrow Controls -->
+    <div class="carousel-arrows">
+      <div class="arrow left" onclick="prevSlide()">&#10094;</div>
+      <div class="arrow right" onclick="nextSlide()">&#10095;</div>
+    </div>
+    <!-- Dots -->
     <div class="carousel-dots">
       <span class="dot active" onclick="goToSlide(0)"></span>
       <span class="dot" onclick="goToSlide(1)"></span>
       <span class="dot" onclick="goToSlide(2)"></span>
     </div>
   </section>
-  
-  
 
-  <!-- Hero Text -->
-  <section class="hero">
-    <h1 data-en="Empowering Global Expansion" data-zh="赋能全球拓展">赋能全球拓展</h1>
-    <p data-en="We provide digital solutions that help your business go global."
-       data-zh="我们提供助力出海的数字化解决方案。">
-       我们提供助力出海的数字化解决方案。
+  <!-- About Section -->
+<section class="about-section">
+  <div class="about-text">
+    <h2 data-en="About Qicheng" data-zh="关于启程">关于启程</h2>
+    <p data-en="Qicheng is dedicated to helping businesses expand internationally through digital strategies, localized operations, and cross-border insights."
+       data-zh="启程致力于通过数字化战略、本地化运营与跨境洞察，助力企业迈向国际市场。">
+       启程致力于通过数字化战略、本地化运营与跨境洞察，助力企业迈向国际市场。
     </p>
-  </section>
+  </div>
+  <div class="about-image">
+    <!-- 后续你可替换下面这张图片路径 -->
+    <img src="images/about-placeholder.jpg" alt="About Us Image">
+  </div>
+</section>
 
-  <!-- Services Preview -->
-  <section class="section">
-    <h2 data-en="What We Offer" data-zh="我们的服务">我们的服务</h2>
-    <div class="cards">
-      <div class="card">
-        <h3 data-en="Market Entry Consulting" data-zh="市场准入咨询">市场准入咨询</h3>
-        <p data-en="Comprehensive research and market evaluation for confident international expansion."
-           data-zh="提供全面的研究与市场评估，助力自信拓展海外市场。">
-           提供全面的研究与市场评估，助力自信拓展海外市场。
-        </p>
-      </div>
-      <div class="card">
-        <h3 data-en="Digital Marketing" data-zh="数字营销">数字营销</h3>
-        <p data-en="Cross-platform content strategies tailored to overseas audiences and culture."
-           data-zh="跨平台内容策略，针对海外受众与文化定制。">
-           跨平台内容策略，针对海外受众与文化定制。
-        </p>
-      </div>
-      <div class="card">
-        <h3 data-en="Localization Services" data-zh="本地化服务">本地化服务</h3>
-        <p data-en="Brand messaging, UI, product details customized to fit each target market."
-           data-zh="品牌语言、界面与产品信息根据目标市场定制。">
-           品牌语言、界面与产品信息根据目标市场定制。
-        </p>
-      </div>
+<!-- Services Section -->
+<section class="section">
+  <h2 data-en="Our Services" data-zh="我们的服务">我们的服务</h2>
+  <div class="cards">
+    <div class="card">
+      <h3 data-en="Market Entry Consulting" data-zh="市场准入咨询">市场准入咨询</h3>
+      <p data-en="Comprehensive research and market evaluation for confident international expansion."
+         data-zh="提供全面的研究与市场评估，助力自信拓展海外市场。">
+         提供全面的研究与市场评估，助力自信拓展海外市场。
+      </p>
     </div>
-  </section>
-
-  <!-- Partners -->
-  <section class="section">
-    <h2 data-en="Our Partners" data-zh="合作伙伴">合作伙伴</h2>
-    <div class="cards">
-      <img src="images/partner1.png" alt="Partner 1" style="height: 50px;">
-      <img src="images/partner2.png" alt="Partner 2" style="height: 50px;">
-      <img src="images/partner3.png" alt="Partner 3" style="height: 50px;">
+    <div class="card">
+      <h3 data-en="Digital Marketing" data-zh="数字营销">数字营销</h3>
+      <p data-en="Cross-platform content strategies tailored to overseas audiences and culture."
+         data-zh="跨平台内容策略，针对海外受众与文化定制。">
+         跨平台内容策略，针对海外受众与文化定制。
+      </p>
     </div>
-  </section>
+    <div class="card">
+      <h3 data-en="Localization Services" data-zh="本地化服务">本地化服务</h3>
+      <p data-en="Brand messaging, UI, product details customized to fit each target market."
+         data-zh="品牌语言、界面与产品信息根据目标市场定制。">
+         品牌语言、界面与产品信息根据目标市场定制。
+      </p>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
-      © 2025 启程出海 版权所有
-    </p>
-  </footer>
+<!-- Partners Section -->
+<section class="section">
+  <h2 data-en="Our Partners" data-zh="合作伙伴">合作伙伴</h2>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <img src="images/partners-banner.png" alt="Partners Banner" style="width: 100%; border-radius: 8px; border: 2px solid var(--accent);" />
+  </div>
+</section>
 
-  <script src="assets/script.js"></script>
-</body>
-</html>
+
+<!-- Contact Section -->
+<section class="section" style="display: flex; justify-content: space-between; align-items: center; padding: 3rem 2rem; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; text-align: left;">
+    <h2 data-en="Contact Us" data-zh="联系我们">联系我们</h2>
+    <p data-en="Email: contact@qichengglobal.com" data-zh="邮箱：contact@qichengglobal.com">邮箱：contact@qichengglobal.com</p>
+    <p data-en="Phone: +86 123 456 789" data-zh="电话：+86 123 456 789">电话：+86 123 456 789</p>
+  </div>
+  <div style="flex: 1; text-align: right; min-width: 200px;">
+    <img src="images/qrcode.png" alt="QR Code" style="height: 120px;" />
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
+    © 2025 启程出海 版权所有
+  </p>
+</footer>
