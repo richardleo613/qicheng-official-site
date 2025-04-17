@@ -429,68 +429,75 @@ img {
 
 
 
-/* 服务页面样式 */
-.page-title {
+/* 页面服务模块样式 */
+.services-page-section {
+  padding: 80px 60px;
+  background: linear-gradient(to bottom, #e4f4ff, #fff);
+}
+
+.section-title {
   text-align: center;
-  padding: 60px 20px 30px;
-  background: linear-gradient(to right, #d8eefe, #fbe4ec);
+  font-size: 38px;
+  margin-bottom: 60px;
   color: #003366;
 }
 
-.page-title h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  padding: 60px 40px;
-  background-color: #ffffff;
-}
-
-.service-card {
-  background: #f9fbff;
-  border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  padding: 20px;
-  transition: transform 0.3s ease;
+.service-box {
+  width: 22%;
+  background: white;
+  border-radius: 20px;
   text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-.service-card:hover {
+.service-box:hover {
   transform: translateY(-8px);
 }
 
-.service-card img {
+.service-label {
+  background: linear-gradient(to right, #69bff8, #fba0d0);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.service-box img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-.service-title {
-  margin-top: 15px;
-  background: linear-gradient(to right, #5eb9f0, #f3a6c8);
-  color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: bold;
+.service-box p {
+  margin: 15px 0;
+  font-size: 15px;
+  color: #444;
 }
 
 .service-btn {
   display: inline-block;
-  margin-top: 10px;
-  color: #fff;
-  background: #5eb9f0;
-  padding: 8px 20px;
-  border-radius: 20px;
+  background: #69bff8;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
   text-decoration: none;
+  font-weight: bold;
   transition: background 0.3s;
 }
 
 .service-btn:hover {
-  background: #3fa2dd;
+  background: #4aa9e0;
 }
+
