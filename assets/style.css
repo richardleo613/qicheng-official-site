@@ -661,3 +661,33 @@ nav.nav-center a.active {
     width: 100%;
   }
 }
+
+/* === 一级菜单标题可点击展开（新增） === */
+.menu-title.expandable {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+.menu-title.expandable::after {
+  content: '▾';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+/* === 子菜单初始默认隐藏，可通过JS控制显示 === */
+.submenu {
+  display: none;
+  margin: 0.5rem 0 1.2rem 1rem;
+  padding-left: 0;
+}
+
+/* === 子菜单列表项激活状态高亮 === */
+.submenu li.active {
+  background-color: var(--link-hover);
+  color: white;
+}

@@ -34,21 +34,21 @@
   <aside class="sidebar">
     <ul class="menu">
 
-      <!-- 公司注册 -->
+      <!-- 公司注册：可展开 -->
       <li>
-        <div class="menu-title" data-en="Company Registration" data-zh="公司注册">公司注册</div>
+        <div class="menu-title expandable" onclick="toggleSubmenu(this)" data-en="Company Registration" data-zh="公司注册">公司注册</div>
         <ul class="submenu">
-          <li data-type="register" data-region="indonesia">印尼</li>
-          <li data-type="register" data-region="malaysia">马来西亚</li>
-          <li data-type="register" data-region="thailand">泰国</li>
-          <li data-type="register" data-region="japan">日本</li>
-          <li data-type="register" data-region="philippines">菲律宾</li>
-          <li data-type="register" data-region="singapore">新加坡</li>
-          <li data-type="register" data-region="nordic">北欧</li>
+          <li data-type="register" data-region="indonesia" data-zh="印尼" data-en="Indonesia">印尼</li>
+          <li data-type="register" data-region="malaysia" data-zh="马来西亚" data-en="Malaysia">马来西亚</li>
+          <li data-type="register" data-region="thailand" data-zh="泰国" data-en="Thailand">泰国</li>
+          <li data-type="register" data-region="japan" data-zh="日本" data-en="Japan">日本</li>
+          <li data-type="register" data-region="philippines" data-zh="菲律宾" data-en="Philippines">菲律宾</li>
+          <li data-type="register" data-region="singapore" data-zh="新加坡" data-en="Singapore">新加坡</li>
+          <li data-type="register" data-region="nordic" data-zh="北欧" data-en="Nordic">北欧</li>
         </ul>
       </li>
 
-      <!-- 其他业务（不展开） -->
+      <!-- 其他服务暂不展开 -->
       <li>
         <div class="menu-title" data-en="Visa Services" data-zh="签证业务">签证业务</div>
       </li>
@@ -62,7 +62,7 @@
     </ul>
   </aside>
 
-  <!-- 右侧显示区域 -->
+  <!-- 右侧图片展示 -->
   <section class="content-display">
     <img id="service-image" src="images/service-default.jpg" alt="服务首页图">
   </section>
