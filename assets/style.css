@@ -220,24 +220,28 @@ nav.nav-center a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 2.5rem 3rem;
   background: var(--primary);
   color: var(--text);
+  gap: 2rem; /* 拉开图文间距 */
+  max-width: 1100px;
+  margin: 0 auto; /* 页面居中 */
 }
 
 .about-text {
   flex: 1;
-  padding-right: 2rem;
+  padding: 0 1rem;
   text-align: left;
 }
 
 .about-text h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .about-text p {
   font-size: 1rem;
+  line-height: 1.8;  /* 增加行间距 */
 }
 
 .about-image {
@@ -246,6 +250,9 @@ nav.nav-center a:hover {
 
 .about-image img {
   width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
   border: 2px solid var(--accent);
 }
