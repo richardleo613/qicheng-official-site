@@ -2,92 +2,107 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我们的服务 | 启程出海</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-en="Qicheng - Services" data-zh="启程出海 - 服务列表">Qicheng - Services</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/filter.js"></script>
 </head>
 <body>
 
-  <!-- 顶部导航栏 -->
-  <header class="navbar">
-    <img src="images/logo.png" alt="启程出海 Logo" class="logo" />
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" data-zh="首页" data-en="Home">首页</a></li>
-        <li><a href="services.html" class="active" data-zh="服务" data-en="Services">服务</a></li>
-        <li><a href="about.html" data-zh="关于我们" data-en="About Us">关于我们</a></li>
-      </ul>
+  <!-- Header 与首页保持一致 -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
+    </a>    
+    <nav class="nav-center">
+      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="services.html" class="active" data-en="Services" data-zh="服务">Services</a>
+      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
     </nav>
-    <div class="lang-switch">
-      <button data-lang="zh">中文</button>
-      <button data-lang="en">EN</button>
-    </div>
+    <div class="lang-dropdown" onclick="toggleLangMenu()">
+      <span class="lang-icon">&#127760;</span>
+      <div class="lang-menu" id="langMenu">
+        <div onclick="setLanguage('zh')">中文</div>
+        <div onclick="setLanguage('en')">English</div>
+      </div>
+    </div>      
   </header>
 
-  <!-- 页面主内容 -->
+  <!-- 筛选 + 服务列表 主体区域 -->
   <main class="services-page">
-
     <!-- 左侧筛选栏 -->
     <aside class="filter-sidebar">
-      <h3>筛选服务</h3>
+      <h3 data-zh="筛选服务" data-en="Filter Services">筛选服务</h3>
 
       <div class="filter-group">
         <p class="filter-title">服务类型</p>
         <ul>
-          <li><label><input type="checkbox" value="register" checked /> 公司注册</label></li>
-          <li><label><input type="checkbox" value="visa" checked /> 签证业务</label></li>
-          <li><label><input type="checkbox" value="license" checked /> 行业资质</label></li>
-          <li><label><input type="checkbox" value="finance" checked /> 财税咨询</label></li>
+          <li><label><input type="checkbox" value="register" checked> 公司注册</label></li>
+          <li><label><input type="checkbox" value="visa" checked> 签证业务</label></li>
+          <li><label><input type="checkbox" value="license" checked> 行业资质</label></li>
+          <li><label><input type="checkbox" value="finance" checked> 财税咨询</label></li>
         </ul>
       </div>
 
       <div class="filter-group">
         <p class="filter-title">国家/地区</p>
         <ul>
-          <li><label><input type="checkbox" value="indonesia" checked /> 印尼</label></li>
-          <li><label><input type="checkbox" value="malaysia" checked /> 马来西亚</label></li>
-          <li><label><input type="checkbox" value="thailand" checked /> 泰国</label></li>
-          <li><label><input type="checkbox" value="japan" checked /> 日本</label></li>
-          <li><label><input type="checkbox" value="philippines" checked /> 菲律宾</label></li>
-          <li><label><input type="checkbox" value="singapore" checked /> 新加坡</label></li>
-          <li><label><input type="checkbox" value="nordic" checked /> 北欧</label></li>
+          <li><label><input type="checkbox" value="indonesia" checked> 印尼</label></li>
+          <li><label><input type="checkbox" value="malaysia" checked> 马来西亚</label></li>
+          <li><label><input type="checkbox" value="thailand" checked> 泰国</label></li>
+          <li><label><input type="checkbox" value="japan" checked> 日本</label></li>
+          <li><label><input type="checkbox" value="philippines" checked> 菲律宾</label></li>
+          <li><label><input type="checkbox" value="singapore" checked> 新加坡</label></li>
+          <li><label><input type="checkbox" value="nordic" checked> 北欧</label></li>
         </ul>
       </div>
     </aside>
 
-    <!-- 右侧服务展示 -->
-    <section class="service-list">
-
-      <!-- 示例服务卡片（支持多个） -->
+    <!-- 右侧服务卡片区域 -->
+    <section class="service-results">
+      <!-- 示例卡片 -->
       <div class="service-card" data-type="register" data-region="indonesia">
-        <img src="images/service-register.jpg" alt="公司注册服务">
-        <div class="card-content">
-          <h4>印尼公司注册</h4>
-          <p>快速完成印尼当地合法公司设立，全流程无忧代办。</p>
-          <a href="#" class="btn">了解更多</a>
-        </div>
+        <a href="#" class="service-link">
+          <div class="service-header">
+            <span>印尼公司注册</span>
+            <span class="arrow"></span>
+          </div>
+          <img src="images/service1.jpg" alt="印尼公司注册">
+        </a>
       </div>
 
       <div class="service-card" data-type="visa" data-region="thailand">
-        <img src="images/service-visa.jpg" alt="签证服务">
-        <div class="card-content">
-          <h4>泰国签证办理</h4>
-          <p>涵盖商务签、工作签、长期居留等全类型服务。</p>
-          <a href="#" class="btn">了解更多</a>
-        </div>
+        <a href="#" class="service-link">
+          <div class="service-header">
+            <span>泰国签证服务</span>
+            <span class="arrow"></span>
+          </div>
+          <img src="images/service2.jpg" alt="泰国签证">
+        </a>
       </div>
 
-      <!-- 更多服务卡片可继续添加 -->
+      <div class="service-card" data-type="finance" data-region="japan">
+        <a href="#" class="service-link">
+          <div class="service-header">
+            <span>日本财税服务</span>
+            <span class="arrow"></span>
+          </div>
+          <img src="images/service3.jpg" alt="日本财税">
+        </a>
+      </div>
 
+      <!-- 更多卡片可自行添加 -->
     </section>
-
   </main>
 
-  <!-- 页脚 -->
-  <footer class="footer">
-    <p>&copy; 启程出海数字科技有限公司 版权所有</p>
+  <!-- Footer -->
+  <footer>
+    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
+      © 2025 启程出海 版权所有
+    </p>
   </footer>
 
+  <!-- 可选语言切换脚本复用 -->
+  <script src="assets/script.js"></script>
 </body>
 </html>
