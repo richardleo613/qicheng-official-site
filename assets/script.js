@@ -1,12 +1,8 @@
 // 🌍 中英文切换功能
-function toggleLanguage() {
+function setLanguage(lang) {
   const elements = document.querySelectorAll('[data-en]');
-  if (elements.length === 0) return;
-
-  const isEnglish = elements[0].innerText === elements[0].getAttribute('data-en');
-
   elements.forEach(el => {
-    el.innerText = isEnglish ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+    el.innerText = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
   });
 }
 

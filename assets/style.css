@@ -73,12 +73,50 @@ nav.nav-center a:hover {
   font-weight: 600;
 }
 
-.lang-switch {
-  margin-left: 1.5rem;
+.lang-dropdown {
+  position: relative;
   cursor: pointer;
-  font-weight: bold;
-  color: #0077cc;
+  font-size: 1.3rem;
+  margin-left: auto;
+  padding: 0.5rem;
 }
+
+.lang-icon {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.lang-dropdown:hover .lang-icon {
+  color: var(--link-hover);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 140%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 999;
+}
+
+.lang-dropdown:hover .lang-menu {
+  display: block;
+}
+
+.lang-menu div {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.lang-menu div:hover {
+  background-color: var(--primary);
+}
+
 
 /* 轮播区域 */
 .carousel {
