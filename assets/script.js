@@ -10,57 +10,70 @@ function toggleLanguage() {
   });
 }
 
-// 页面加载时默认显示中文 + 启动轮播图
+// 页面加载默认中文 + 启动轮播
 window.onload = function () {
-  // 默认语言设为中文
   const elements = document.querySelectorAll('[data-en]');
   elements.forEach(el => {
     el.innerText = el.getAttribute('data-zh');
   });
 
-  // 启动轮播
   initCarousel();
 };
 
-// 🎠 轮播图逻辑
+// 🎠 无限轮播图逻辑
 let currentIndex = 0;
-let carouselInterval;
+let autoSlideInterval;
+let isTransitioning = false;
 
 function initCarousel() {
   const track = document.getElementById('carousel-track');
+  const slides = track.querySelectorAll('img');
   const dots = document.querySelectorAll('.dot');
+  const totalSlides = slides.length - 1; // 最后一个是克隆图
 
   function goToSlide(index) {
+    if (isTransitioning) return;
     currentIndex = index;
     updateCarousel();
+    resetAutoSlide();
   }
 
   function updateCarousel() {
-    if (!track) return;
+    isTransitioning = true;
+    track.style.transition = 'transform 0.5s ease-in-out';
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
     dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
+    if (currentIndex === totalSlides) {
+      dots[0].classList.add('active');
+    } else {
+      dots[currentIndex].classList.add('active');
+    }
   }
 
-  // 自动轮播
-  carouselInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % dots.length;
+  function nextSlide() {
+    currentIndex++;
     updateCarousel();
-  }, 5000); // 每 5 秒切换一次
+  }
 
-  // 绑定点击事件
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      clearInterval(carouselInterval);
-      goToSlide(index);
-      // 重启自动轮播
-      carouselInterval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % dots.length;
-        updateCarousel();
-      }, 5000);
-    });
+  track.addEventListener('transitionend', () => {
+    if (currentIndex === totalSlides) {
+      track.style.transition = 'none';
+      currentIndex = 0;
+      track.style.transform = `translateX(0%)`;
+    }
+    isTransitioning = false;
   });
 
-  // 初始调用
-  updateCarousel();
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(nextSlide, 5000);
+  }
+
+  // 绑定点击圆点
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+  });
+
+  resetAutoSlide(); // 启动轮播
 }
