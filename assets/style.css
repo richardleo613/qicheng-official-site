@@ -669,6 +669,10 @@ nav.nav-center a.active {
   padding-right: 20px;
 }
 
+.menu-title.expandable.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .menu-title.expandable::after {
   content: '▾';
   position: absolute;

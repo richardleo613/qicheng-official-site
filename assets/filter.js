@@ -55,3 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   });
   
+  // 在 DOMContentLoaded 外部加（或加到 window 上）
+function toggleSubmenu(titleElement) {
+    const submenu = titleElement.nextElementSibling;
+    if (submenu && submenu.classList.contains("submenu")) {
+      submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+    }
+  }
+  
+  titleElement.classList.toggle("open");
