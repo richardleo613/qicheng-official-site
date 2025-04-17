@@ -565,117 +565,99 @@ nav.nav-center a.active {
 .lang-menu div:hover {
   background-color: var(--primary);
 }
-/* 服务页面主结构 */
-.services-page {
+
+/* ===== 服务页面主布局 ===== */
+.service-nested-layout {
   display: flex;
-  gap: 2rem;
-  padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 3rem 2rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
-/* 左侧筛选栏 */
-.filter-sidebar {
-  flex: 0 0 260px;
-  background: var(--primary);
+/* ===== 左侧菜单栏 ===== */
+.sidebar {
+  width: 240px;
+  background-color: var(--primary);
+  border-radius: 10px;
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 120px;
   height: fit-content;
 }
 
-.filter-sidebar h3 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.filter-group {
-  margin-bottom: 1.5rem;
-}
-
-.filter-title {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #555;
-}
-
-.filter-group ul {
+.sidebar .menu {
   list-style: none;
   padding-left: 0;
 }
 
-.filter-group li {
+.menu-title {
+  font-weight: 600;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
+  cursor: default;
+  padding: 0.5rem 0;
+  color: var(--text);
+  border-bottom: 1px solid #ddd;
 }
 
-.filter-group label {
+.submenu {
+  list-style: none;
+  margin: 0 0 1.5rem 0;
+  padding-left: 1rem;
+}
+
+.submenu li {
+  margin: 0.3rem 0;
   cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
 }
 
-.filter-group input[type="checkbox"] {
-  margin-right: 6px;
+.submenu li:hover {
+  background-color: var(--accent);
+  color: #000;
 }
 
-/* 右侧服务展示区 */
-.service-results {
+.submenu li.active {
+  background-color: var(--link-hover);
+  color: #fff;
+}
+
+/* ===== 右侧内容展示区域 ===== */
+.content-display {
   flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: flex-start;
-}
-
-/* 复用首页服务卡片样式 */
-.service-card {
-  width: 22%;
-  min-width: 220px;
-  border: none;
-  border-radius: 0;
+  min-width: 300px;
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  background-color: transparent;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-}
-
-.service-card img {
+.content-display img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: auto;
+  border-radius: 12px;
   display: block;
-  border: none;
+  object-fit: cover;
 }
 
-/* 响应式适配 */
-@media (max-width: 1024px) {
-  .services-page {
+/* ===== 响应式布局 ===== */
+@media screen and (max-width: 768px) {
+  .service-nested-layout {
     flex-direction: column;
+    padding: 2rem 1rem;
   }
-  .filter-sidebar {
+
+  .sidebar {
     width: 100%;
     position: static;
   }
-  .service-results {
-    justify-content: center;
-  }
-}
 
-@media (max-width: 768px) {
-  .service-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 480px) {
-  .service-card {
+  .content-display {
     width: 100%;
   }
 }

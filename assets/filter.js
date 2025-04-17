@@ -1,41 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const checkboxes = document.querySelectorAll(".filter-sidebar input[type='checkbox']");
-    const serviceCards = document.querySelectorAll(".service-card");
+    const menuItems = document.querySelectorAll(".submenu li");
+    const image = document.getElementById("service-image");
   
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener("change", applyFilters);
-    });
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        // 1. 获取服务类型和地区
+        const type = item.getAttribute("data-type");
+        const region = item.getAttribute("data-region");
   
-    function applyFilters() {
-      // 获取所有勾选项
-      const selectedTypes = getCheckedValues("服务类型");
-      const selectedRegions = getCheckedValues("国家/地区");
+        // 2. 构建图片路径
+        const imagePath = `images/${type}-${region}.jpg`;
   
-      serviceCards.forEach(card => {
-        const type = card.getAttribute("data-type");
-        const region = card.getAttribute("data-region");
+        // 3. 设置图片
+        image.src = imagePath;
+        image.alt = `${type} - ${region}`;
   
-        const matchType = selectedTypes.includes(type);
-        const matchRegion = selectedRegions.includes(region);
-  
-        if (matchType && matchRegion) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+        // 4. 更新高亮状态
+        menuItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
       });
-    }
-  
-    function getCheckedValues(titleText) {
-      const group = Array.from(document.querySelectorAll(".filter-group"))
-        .find(g => g.querySelector(".filter-title").textContent.trim() === titleText);
-  
-      if (!group) return [];
-  
-      return Array.from(group.querySelectorAll("input[type='checkbox']:checked"))
-        .map(cb => cb.value);
-    }
-  
-    applyFilters(); // 页面首次加载时也执行一次
+    });
   });
   

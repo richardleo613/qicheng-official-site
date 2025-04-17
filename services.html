@@ -3,106 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-en="Qicheng - Services" data-zh="启程出海 - 服务列表">Qicheng - Services</title>
+  <title data-en="Qicheng - Services" data-zh="启程出海 - 服务">Qicheng - Services</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/filter.js"></script>
+  <script defer src="assets/filter-nested.js"></script>
 </head>
 <body>
 
-  <!-- Header 与首页保持一致 -->
-  <header>
-    <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
-    </a>    
-    <nav class="nav-center">
-      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-      <a href="services.html" class="active" data-en="Services" data-zh="服务">Services</a>
-      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-    </nav>
-    <div class="lang-dropdown" onclick="toggleLangMenu()">
-      <span class="lang-icon">&#127760;</span>
-      <div class="lang-menu" id="langMenu">
-        <div onclick="setLanguage('zh')">中文</div>
-        <div onclick="setLanguage('en')">English</div>
-      </div>
-    </div>      
-  </header>
+<!-- 顶部导航栏 -->
+<header>
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
+  </a>    
+  <nav class="nav-center">
+    <a href="index.html" data-en="Home" data-zh="首页">Home</a>
+    <a href="services.html" class="active" data-en="Services" data-zh="服务">Services</a>
+    <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
+  </nav>
+  <div class="lang-dropdown" onclick="toggleLangMenu()">
+    <span class="lang-icon">&#127760;</span>
+    <div class="lang-menu" id="langMenu">
+      <div onclick="setLanguage('zh')">中文</div>
+      <div onclick="setLanguage('en')">English</div>
+    </div>
+  </div>      
+</header>
 
-  <!-- 筛选 + 服务列表 主体区域 -->
-  <main class="services-page">
-    <!-- 左侧筛选栏 -->
-    <aside class="filter-sidebar">
-      <h3 data-zh="筛选服务" data-en="Filter Services">筛选服务</h3>
+<!-- 主体布局 -->
+<main class="service-nested-layout">
+  <!-- 左侧菜单 -->
+  <aside class="sidebar">
+    <ul class="menu">
 
-      <div class="filter-group">
-        <p class="filter-title">服务类型</p>
-        <ul>
-          <li><label><input type="checkbox" value="register" checked> 公司注册</label></li>
-          <li><label><input type="checkbox" value="visa" checked> 签证业务</label></li>
-          <li><label><input type="checkbox" value="license" checked> 行业资质</label></li>
-          <li><label><input type="checkbox" value="finance" checked> 财税咨询</label></li>
+      <!-- 公司注册 -->
+      <li>
+        <div class="menu-title" data-en="Company Registration" data-zh="公司注册">公司注册</div>
+        <ul class="submenu">
+          <li data-type="register" data-region="indonesia">印尼</li>
+          <li data-type="register" data-region="malaysia">马来西亚</li>
+          <li data-type="register" data-region="thailand">泰国</li>
+          <li data-type="register" data-region="japan">日本</li>
+          <li data-type="register" data-region="philippines">菲律宾</li>
+          <li data-type="register" data-region="singapore">新加坡</li>
+          <li data-type="register" data-region="nordic">北欧</li>
         </ul>
-      </div>
+      </li>
 
-      <div class="filter-group">
-        <p class="filter-title">国家/地区</p>
-        <ul>
-          <li><label><input type="checkbox" value="indonesia" checked> 印尼</label></li>
-          <li><label><input type="checkbox" value="malaysia" checked> 马来西亚</label></li>
-          <li><label><input type="checkbox" value="thailand" checked> 泰国</label></li>
-          <li><label><input type="checkbox" value="japan" checked> 日本</label></li>
-          <li><label><input type="checkbox" value="philippines" checked> 菲律宾</label></li>
-          <li><label><input type="checkbox" value="singapore" checked> 新加坡</label></li>
-          <li><label><input type="checkbox" value="nordic" checked> 北欧</label></li>
-        </ul>
-      </div>
-    </aside>
+      <!-- 其他业务（不展开） -->
+      <li>
+        <div class="menu-title" data-en="Visa Services" data-zh="签证业务">签证业务</div>
+      </li>
+      <li>
+        <div class="menu-title" data-en="Industry Qualifications" data-zh="行业资质">行业资质</div>
+      </li>
+      <li>
+        <div class="menu-title" data-en="Tax Consulting" data-zh="财税咨询">财税咨询</div>
+      </li>
 
-    <!-- 右侧服务卡片区域 -->
-    <section class="service-results">
-      <!-- 示例卡片 -->
-      <div class="service-card" data-type="register" data-region="indonesia">
-        <a href="#" class="service-link">
-          <div class="service-header">
-            <span>印尼公司注册</span>
-            <span class="arrow"></span>
-          </div>
-          <img src="images/service1.jpg" alt="印尼公司注册">
-        </a>
-      </div>
+    </ul>
+  </aside>
 
-      <div class="service-card" data-type="visa" data-region="thailand">
-        <a href="#" class="service-link">
-          <div class="service-header">
-            <span>泰国签证服务</span>
-            <span class="arrow"></span>
-          </div>
-          <img src="images/service2.jpg" alt="泰国签证">
-        </a>
-      </div>
+  <!-- 右侧显示区域 -->
+  <section class="content-display">
+    <img id="service-image" src="images/service-default.jpg" alt="服务首页图">
+  </section>
+</main>
 
-      <div class="service-card" data-type="finance" data-region="japan">
-        <a href="#" class="service-link">
-          <div class="service-header">
-            <span>日本财税服务</span>
-            <span class="arrow"></span>
-          </div>
-          <img src="images/service3.jpg" alt="日本财税">
-        </a>
-      </div>
+<!-- 页脚 -->
+<footer>
+  <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
+    © 2025 启程出海 版权所有
+  </p>
+</footer>
 
-      <!-- 更多卡片可自行添加 -->
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
-      © 2025 启程出海 版权所有
-    </p>
-  </footer>
-
-  <!-- 可选语言切换脚本复用 -->
-  <script src="assets/script.js"></script>
+<script src="assets/script.js"></script>
 </body>
 </html>
