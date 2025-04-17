@@ -376,9 +376,6 @@ img {
   height: 28px;
   border-radius: 50%;
   background-color: white;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -386,12 +383,14 @@ img {
 
 .service-header .arrow::before {
   content: '';
-  display: block;
-  width: 6px;
-  height: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
   border-top: 2px solid #0c2c55;
   border-right: 2px solid #0c2c55;
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .service-header .arrow:hover {
