@@ -419,3 +419,78 @@ img {
     width: 100%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* 服务页面样式 */
+.page-title {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background: linear-gradient(to right, #d8eefe, #fbe4ec);
+  color: #003366;
+}
+
+.page-title h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+.service-card {
+  background: #f9fbff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-title {
+  margin-top: 15px;
+  background: linear-gradient(to right, #5eb9f0, #f3a6c8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.service-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  background: #5eb9f0;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.service-btn:hover {
+  background: #3fa2dd;
+}

@@ -1,64 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-en="Qicheng - Services" data-zh="启程出海 - 服务">Qicheng - Services</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我们的服务 - 启程出海</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo" data-en="QICHENG" data-zh="启程">QICHENG</div>
-    <nav>
-      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-      <a href="services.html" data-en="Services" data-zh="服务">Services</a>
-      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-      <span class="lang-switch" onclick="toggleLanguage()">EN/中文</span>
+
+  <!-- 顶部导航栏 -->
+  <header class="header">
+    <div class="logo">启程</div>
+    <nav class="navbar">
+      <a href="index.html">首页</a>
+      <a href="services.html" class="active">服务</a>
+      <a href="about.html">关于我们</a>
     </nav>
   </header>
 
-  <section class="section">
-    <h1 data-en="Our Services" data-zh="我们的服务">Our Services</h1>
-    <p data-en="Explore how we help brands expand globally through localized, data-driven strategies."
-       data-zh="探索我们如何通过本地化、数据驱动的策略帮助品牌出海。">
-       Explore how we help brands expand globally through localized, data-driven strategies.
-    </p>
-    <div class="cards">
-      <div class="card">
-        <h3 data-en="Market Entry Consulting" data-zh="市场准入咨询">Market Entry Consulting</h3>
-        <p data-en="Comprehensive research and market evaluation for confident international expansion."
-           data-zh="提供全面的研究与市场评估，助力自信拓展海外市场。">
-           Comprehensive research and market evaluation for confident international expansion.
-        </p>
-      </div>
-      <div class="card">
-        <h3 data-en="Digital Marketing" data-zh="数字营销">Digital Marketing</h3>
-        <p data-en="Cross-platform content strategies tailored to overseas audiences and culture."
-           data-zh="跨平台内容策略，针对海外受众与文化定制。">
-           Cross-platform content strategies tailored to overseas audiences and culture.
-        </p>
-      </div>
-      <div class="card">
-        <h3 data-en="Localization Services" data-zh="本地化服务">Localization Services</h3>
-        <p data-en="Brand messaging, UI, product details customized to fit each target market."
-           data-zh="品牌语言、界面与产品信息根据目标市场定制。">
-           Brand messaging, UI, product details customized to fit each target market.
-        </p>
-      </div>
-      <div class="card">
-        <h3 data-en="Global E-Commerce Setup" data-zh="全球电商搭建">Global E-Commerce Setup</h3>
-        <p data-en="From website localization to cross-border logistics, everything you need to sell globally."
-           data-zh="从网站本地化到跨境物流，全方位支持全球销售。">
-           From website localization to cross-border logistics, everything you need to sell globally.
-        </p>
-      </div>
+  <!-- 页面标题 -->
+  <section class="page-title">
+    <h1>我们的服务</h1>
+    <p>为您的出海之路提供全方位支持</p>
+  </section>
+
+  <!-- 服务内容区域 -->
+  <section class="service-grid">
+    <!-- 公司注册 -->
+    <div class="service-card">
+      <img src="images/register.jpg" alt="公司注册">
+      <div class="service-title">公司注册</div>
+      <p>提供多国家公司注册服务，包括流程规划与文件准备。</p>
+      <a href="#" class="service-btn">了解更多 →</a>
+    </div>
+
+    <!-- 签证业务 -->
+    <div class="service-card">
+      <img src="images/visa.jpg" alt="签证业务">
+      <div class="service-title">签证业务</div>
+      <p>覆盖多种签证类型，支持境外团队合法入驻运营。</p>
+      <a href="#" class="service-btn">了解更多 →</a>
+    </div>
+
+    <!-- 行业资质 -->
+    <div class="service-card">
+      <img src="images/license.jpg" alt="行业资质">
+      <div class="service-title">行业资质</div>
+      <p>申请行业所需牌照，合规入场保障业务合法开展。</p>
+      <a href="#" class="service-btn">了解更多 →</a>
+    </div>
+
+    <!-- 财税咨询 -->
+    <div class="service-card">
+      <img src="images/tax.jpg" alt="财税咨询">
+      <div class="service-title">财税咨询</div>
+      <p>境外税务规划、申报与合规咨询，助力财务稳健发展。</p>
+      <a href="#" class="service-btn">了解更多 →</a>
     </div>
   </section>
 
-  <footer>
-    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">© 2025 Qicheng. All rights reserved.</p>
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>© 2025 启程出海 | 版权所有</p>
   </footer>
 
-  <script src="assets/script.js"></script>
 </body>
 </html>
+
