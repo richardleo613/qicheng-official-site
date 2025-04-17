@@ -1,4 +1,13 @@
 :root {
+  --primary: #0c2c55;       /* 深蓝 */
+  --accent: #ffe4f0;        /* 粉色 */
+  --text: #ffffff;          /* 白色文字 */
+  --bg: #ffffff;            /* 白色背景保持 */
+  --link-hover: #66b3ff;    /* 悬停色淡蓝 */
+  --footer-bg: linear-gradient(to right, #0c2c55, #ffe4f0);  /* 深蓝渐变到粉色 */
+}
+
+:root {
   --primary: #e6f2ff;
   --accent: #ffe4f0;
   --text: #333;
