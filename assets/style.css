@@ -428,128 +428,128 @@ img {
 
 
 
-/* 通用容器 */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+:root {
+  --primary: #e6f2ff;
+  --accent: #ffe4f0;
+  --text: #333;
+  --bg: #ffffff;
+  --link-hover: #66b3ff;
+  --footer-bg: linear-gradient(to right, #e6f2ff, #ffe4f0);
+}
+
+/* 重置基础样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 /* 顶部导航栏 */
-.header {
-  background: linear-gradient(to right, #d8eefe, #fbe4ec);
-  padding: 20px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-/* logo */
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: #003366;
-}
-
-/* 菜单导航 */
-.navbar a {
-  margin-left: 30px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #003366;
-  transition: color 0.3s;
-  font-weight: 500;
-}
-
-.navbar a:hover {
-  color: #f36b9b;
-}
-
-.navbar a.active {
-  color: #f36b9b;
-  border-bottom: 2px solid #f36b9b;
-}
-
-/* 标题区域 */
-.section-title-area {
-  text-align: center;
-  padding: 60px 20px 30px;
-  background: linear-gradient(to right, #d8eefe, #fbe4ec);
-  color: #003366;
-}
-
-.section-title-area h2 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.section-title-area p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* 服务模块展示 */
-.service-section {
+header {
+  background-color: var(--primary);
+  padding: 1rem 2rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px;
-  background-color: #ffffff;
 }
 
-.service-card {
-  width: 260px;
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}
-
-.service-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.service-tag {
-  background: linear-gradient(to right, #5eb9f0, #f3a6c8);
-  color: #fff;
-  padding: 8px;
-  border-radius: 8px;
-  font-size: 18px;
-  margin-top: 15px;
+/* logo 图标（左侧） */
+.logo {
   font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--text);
 }
 
-.service-card p {
-  font-size: 15px;
-  color: #444;
-  margin: 15px 0;
+/* 中部导航菜单 */
+nav.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex: 1;
 }
 
-.service-btn {
-  display: inline-block;
-  background: #5eb9f0;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 50px;
+nav.nav-center a {
   text-decoration: none;
+  color: var(--text);
+  font-size: 1rem;
   font-weight: 500;
-  transition: background 0.3s ease;
+  position: relative;
+  padding: 6px 4px;
+  transition: all 0.3s ease;
 }
 
-.service-btn:hover {
-  background: #3fa2dd;
+nav.nav-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--link-hover);
+  transition: width 0.3s ease;
+}
+
+nav.nav-center a:hover::after {
+  width: 100%;
+}
+
+nav.nav-center a:hover {
+  color: var(--link-hover);
+  font-weight: 600;
+}
+
+nav.nav-center a.active {
+  color: var(--link-hover);
+  font-weight: 600;
+}
+
+/* 语言切换按钮 */
+.lang-dropdown {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-left: auto;
+  padding: 0.5rem;
+}
+
+.lang-icon {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.lang-dropdown:hover .lang-icon {
+  color: var(--link-hover);
+}
+
+/* 语言菜单样式 */
+.lang-menu {
+  position: absolute;
+  top: 140%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 999;
+}
+
+.lang-menu div {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.lang-menu div:hover {
+  background-color: var(--primary);
 }
