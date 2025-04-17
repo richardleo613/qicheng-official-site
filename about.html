@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-en="Qicheng - About Us" data-zh="启程出海 - 关于我们">Qicheng - About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-en="About Us - Qicheng" data-zh="关于我们 - 启程出海">关于我们 - 启程出海</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+
+  <!-- ✅ 顶部导航栏，与首页完全一致 -->
   <header>
-    <div class="logo" data-en="QICHENG" data-zh="启程">QICHENG</div>
-    <nav>
-      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-      <a href="services.html" data-en="Services" data-zh="服务">Services</a>
-      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-      <span class="lang-switch" onclick="toggleLanguage()">EN/中文</span>
+    <!-- Logo 左侧 -->
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
+    </a>
+
+    <!-- 中间导航栏 -->
+    <nav class="nav-center">
+      <a href="index.html" data-en="Home" data-zh="首页">首页</a>
+      <a href="services.html" data-en="Services" data-zh="服务">服务</a>
+      <a href="about.html" class="active" data-en="About Us" data-zh="关于我们">关于我们</a>
     </nav>
+
+    <!-- 语言切换 -->
+    <div class="lang-dropdown" onclick="toggleLangMenu()">
+      <span class="lang-icon">&#127760;</span>
+      <div class="lang-menu" id="langMenu">
+        <div onclick="setLanguage('zh')">中文</div>
+        <div onclick="setLanguage('en')">English</div>
+      </div>
+    </div>
   </header>
 
-  <section class="section">
-    <h1 data-en="About Qicheng" data-zh="关于启程">About Qicheng</h1>
-    <p data-en="Qicheng is a technology-driven global consulting agency dedicated to helping ambitious businesses thrive in international markets."
-       data-zh="启程是一家以科技为驱动的全球咨询机构，致力于帮助有抱负的企业在国际市场中蓬勃发展。">
-       Qicheng is a technology-driven global consulting agency dedicated to helping ambitious businesses thrive in international markets.
-    </p>
-    <p data-en="With a blend of data analysis, cultural expertise, and digital transformation, we bridge the gap between local insights and global growth."
-       data-zh="我们融合数据分析、文化洞察与数字化转型，搭建本地理解与全球增长之间的桥梁。">
-       With a blend of data analysis, cultural expertise, and digital transformation, we bridge the gap between local insights and global growth.
-    </p>
-    <img src="images/about.jpg" alt="Qicheng Team or Office" />
-    <p data-en="Our multicultural team spans several continents, with deep understanding of global consumer behavior, regulations, and business cultures."
-       data-zh="我们多元文化背景的团队遍布多个大洲，深谙全球消费者行为、法规与商业文化。">
-       Our multicultural team spans several continents, with deep understanding of global consumer behavior, regulations, and business cultures.
-    </p>
-    <p data-en="We believe every brand has the potential to go global — and we exist to unlock that potential."
-       data-zh="我们相信每一个品牌都有走向全球的潜力，而我们的使命正是激发这一潜力。">
-       We believe every brand has the potential to go global — and we exist to unlock that potential.
-    </p>
-  </section>
-
-  <footer>
-    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">© 2025 Qicheng. All rights reserved.</p>
-  </footer>
+  <!-- 后续内容可继续添加 -->
 
   <script src="assets/script.js"></script>
 </body>
 </html>
+>
