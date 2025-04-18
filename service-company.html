@@ -8,10 +8,29 @@
 </head>
 <body>
 
-  <!-- 返回按钮 -->
-  <a href="services.html" class="back-button">← 返回服务页</a>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
+    </a>    
+    <nav class="nav-center">
+      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="services.html" data-en="Services" data-zh="服务">Services</a>
+      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
+    </nav>
+    <div class="lang-dropdown" onclick="toggleLangMenu()">
+      <span class="lang-icon">&#127760;</span>
+      <div class="lang-menu" id="langMenu">
+        <div onclick="setLanguage('zh')">中文</div>
+        <div onclick="setLanguage('en')">English</div>
+      </div>
+    </div>      
+  </header>
 
-  <!-- 服务图展示区 -->
+  <!-- 返回按钮 -->
+  <a href="services.html" class="back-button" data-en="← Back to Services" data-zh="← 返回服务页">← 返回服务页</a>
+
+  <!-- 页面内容 -->
   <section class="section">
     <h2 data-en="Company Registration" data-zh="公司注册">公司注册</h2>
     <div style="max-width: 1000px; margin: 2rem auto;">
@@ -19,5 +38,18 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer>
+    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
+      © 2025 启程出海 版权所有
+    </p>
+  </footer>
+
+  <!-- 脚本 -->
+  <script src="assets/script.js"></script>
+  <script>
+    const savedLang = localStorage.getItem("preferredLang") || "zh";
+    applyLanguage(savedLang);
+  </script>
 </body>
 </html>
