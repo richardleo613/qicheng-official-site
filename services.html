@@ -1,72 +1,45 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-en="Qicheng - Services" data-zh="启程出海 - 服务">Qicheng - Services</title>
+  <title data-en="Services - Qicheng" data-zh="服务 - 启程">Services - Qicheng</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/filter-nested.js"></script>
 </head>
 <body>
 
-<!-- 顶部导航栏 -->
-<header>
-  <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
-  </a>    
-  <nav class="nav-center">
-    <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-    <a href="services.html" class="active" data-en="Services" data-zh="服务">Services</a>
-    <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-  </nav>
-  <div class="lang-dropdown">
-    <span class="lang-icon" onclick="toggleLangMenu()">&#127760;</span>
-    <div class="lang-menu" id="langMenu">
-      <div onclick="setLanguage('zh')">中文</div>
-      <div onclick="setLanguage('en')">English</div>
-    </div>
-  </div>      
-</header>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
+    </a>    
+    <nav class="nav-center">
+      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="services.html" data-en="Services" data-zh="服务" class="active">Services</a>
+      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
+    </nav>
+    <div class="lang-dropdown" onclick="toggleLangMenu()">
+      <span class="lang-icon">&#127760;</span>
+      <div class="lang-menu" id="langMenu">
+        <div onclick="setLanguage('zh')">中文</div>
+        <div onclick="setLanguage('en')">English</div>
+      </div>
+    </div>      
+  </header>
 
-<!-- 主体布局 -->
-<main class="service-nested-layout">
-  <!-- 左侧菜单 -->
-  <aside class="sidebar">
-    <ul class="menu">
-      <!-- 公司注册 -->
-      <li>
-        <div class="menu-title expandable" data-en="Company Registration" data-zh="公司注册">公司注册</div>
-        <ul class="submenu">
-          <li data-type="register" data-region="indonesia" data-zh="印尼" data-en="Indonesia">印尼</li>
-          <li data-type="register" data-region="malaysia" data-zh="马来西亚" data-en="Malaysia">马来西亚</li>
-          <li data-type="register" data-region="thailand" data-zh="泰国" data-en="Thailand">泰国</li>
-          <li data-type="register" data-region="japan" data-zh="日本" data-en="Japan">日本</li>
-          <li data-type="register" data-region="philippines" data-zh="菲律宾" data-en="Philippines">菲律宾</li>
-          <li data-type="register" data-region="singapore" data-zh="新加坡" data-en="Singapore">新加坡</li>
-          <li data-type="register" data-region="nordic" data-zh="北欧" data-en="Nordic">北欧</li>
-        </ul>
-      </li>
+  <!-- 空页面内容区域（你可以后续添加内容） -->
+  <main style="min-height: 60vh; padding: 4rem 2rem; text-align: center;">
+    <p data-en="This page is under construction." data-zh="页面正在建设中。">页面正在建设中。</p>
+  </main>
 
-      <!-- 其他业务 -->
-      <li><div class="menu-title" data-en="Visa Services" data-zh="签证业务">签证业务</div></li>
-      <li><div class="menu-title" data-en="Industry Qualifications" data-zh="行业资质">行业资质</div></li>
-      <li><div class="menu-title" data-en="Tax Consulting" data-zh="财税咨询">财税咨询</div></li>
-    </ul>
-  </aside>
+  <!-- Footer -->
+  <footer>
+    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
+      © 2025 启程出海 版权所有
+    </p>
+  </footer>
 
-  <!-- 右侧展示图片 -->
-  <section class="content-display">
-    <img id="service-image" src="images/service-default.jpg" alt="服务首页图">
-  </section>
-</main>
-
-<!-- 页脚 -->
-<footer>
-  <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
-    © 2025 启程出海 版权所有
-  </p>
-</footer>
-
-<script src="assets/script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
+
