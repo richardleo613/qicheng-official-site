@@ -1,10 +1,12 @@
 :root {
-  --primary: #e6f2ff;
-  --accent: #ffe4f0;
-  --text: #333;
-  --bg: #ffffff;
-  --link-hover: #66b3ff;
-  --footer-bg: linear-gradient(to right, #e6f2ff, #ffe4f0);
+  --primary: #ffffff;           /* 页面首尾背景为白色 */
+  --accent: #0c2c55;            /* 深蓝主色调 */
+  --text: #1a1a1a;              /* 主文字色 */
+  --bg: #ffffff;                /* 通用背景 */
+  --card-bg: #0c2c55;           /* 卡片或深色模块背景 */
+  --card-shadow: rgba(0, 0, 0, 0.1); /* 阴影颜色 */
+  --link-hover: #1a73e8;        /* 链接 hover 深蓝 */
+  --footer-bg: #ffffff;         /* 页脚背景保持白色 */
 }
 
 * {
@@ -179,7 +181,7 @@ nav.nav-center a:hover {
 }
 
 .carousel-dots .dot.active {
-  background-color: #66b3ff;
+  background-color: var(--accent);
 }
 
 /* 公共段落/卡片样式 */
@@ -202,12 +204,8 @@ nav.nav-center a:hover {
 }
 
 .card {
-  background-color: #fff;
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-  padding: 1.5rem;
-  width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--card-bg);
+  color: #ffffff;
 }
 
 .card:hover {
@@ -217,21 +215,12 @@ nav.nav-center a:hover {
 
 /* 关于我们区域专用 */
 .about-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem 3rem;
-  background: var(--primary);
-  color: var(--text);
-  gap: 2rem; /* 拉开图文间距 */
-  max-width: 1100px;
-  margin: 0 auto; /* 页面居中 */
+  background-color: var(--card-bg);
+  color: #ffffff;
 }
 
-.about-text {
-  flex: 1;
-  padding: 0 1rem;
-  text-align: left;
+.about-text p, .about-text h2 {
+  color: #ffffff;
 }
 
 .about-text h2 {
@@ -298,18 +287,11 @@ img {
 }
 
 .about-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 2rem;
-  background: var(--primary);
-  color: var(--text);
+  background-color: var(--card-bg);
+  color: #ffffff;
 }
-
-.about-text {
-  flex: 1;
-  padding-right: 2rem;
-  text-align: left;
+.about-text p, .about-text h2 {
+  color: #ffffff;
 }
 
 .about-text h2 {
@@ -352,13 +334,12 @@ img {
 }
 
 .service-card {
-  width: 22%;
-  min-width: 220px;
+  background-color: var(--card-bg); /* 深蓝背景 */
   border: none;
-  border-radius: 0;
-  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  color: #ffffff;
   transition: transform 0.3s ease;
-  background-color: transparent;
 }
 
 .service-card:hover {
@@ -439,15 +420,6 @@ img {
 
 
 
-
-:root {
-  --primary: #e6f2ff;
-  --accent: #ffe4f0;
-  --text: #333;
-  --bg: #ffffff;
-  --link-hover: #66b3ff;
-  --footer-bg: linear-gradient(to right, #e6f2ff, #ffe4f0);
-}
 
 /* 重置基础样式 */
 * {
@@ -620,7 +592,7 @@ nav.nav-center a.active {
 
 .submenu li:hover {
   background-color: var(--accent);
-  color: #000;
+  color: #fff;
 }
 
 .submenu li.active {
