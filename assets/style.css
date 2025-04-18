@@ -415,19 +415,20 @@ footer {
 }
 
 .region-card {
-  width: calc(25% - 1.5rem);  /* 每行4个，留出间距 */
-  aspect-ratio: 1 / 1;        /* 固定为正方形 */
+  width: calc(25% - 1.5rem);
+  aspect-ratio: 1 / 1;
   background-color: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 0 4px 12px var(--card-shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
 }
 
 .region-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
 .region-card img {
