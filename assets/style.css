@@ -312,6 +312,9 @@ nav.nav-center a.active {
 }
 
 .service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: linear-gradient(to right, #0c2c55, #2d5caa); /* 更有质感的渐变 */
   color: #fff;
   padding: 1rem 1.5rem;
@@ -322,33 +325,34 @@ nav.nav-center a.active {
   border-top-right-radius: 16px;
 }
 
+/* 白色圆形按钮样式 + 箭头居中 */
 .service-header .arrow {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background-color: white;
-  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* 箭头图标 */
 .service-header .arrow::before {
   content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-top: 2px solid #0c2c55;
   border-right: 2px solid #0c2c55;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: rotate(45deg);
 }
 
+/* Hover 动效 */
 .service-header .arrow:hover {
   background-color: #e6f2ff;
   transform: scale(1.1);
 }
-
 /* ========== Footer ========== */
 footer {
   background: var(--footer-bg);
