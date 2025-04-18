@@ -405,15 +405,16 @@ footer {
 
 
 .service-region-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 2rem;
-  padding: 2rem 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
 }
 
 .region-card {
+  flex: 1 1 calc(25% - 1.5rem);
+  max-width: calc(25% - 1.5rem);
   background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
@@ -438,4 +439,11 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .region-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
