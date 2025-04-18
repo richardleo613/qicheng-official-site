@@ -405,8 +405,9 @@ footer {
 
 
 .service-region-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 一行四个 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1.5rem;
   padding: 3rem 2rem;
   max-width: 1200px;
@@ -414,17 +415,14 @@ footer {
 }
 
 .region-card {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* 正方形 */
+  width: calc(25% - 1.5rem);  /* 每行4个，留出间距 */
+  aspect-ratio: 1 / 1;        /* 固定为正方形 */
   background-color: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .region-card:hover {
@@ -436,13 +434,14 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-grow: 1;
 }
 
 .region-card p {
   position: absolute;
   bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 1rem;
@@ -450,14 +449,14 @@ footer {
   color: var(--accent);
 }
 
+@media (max-width: 1024px) {
+  .region-card {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media (max-width: 600px) {
+  .region-card {
+    width: 100%;
+  }
+}
 
-@media (max-width: 768px) {
-  .service-region-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 480px) {
-  .service-region-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
