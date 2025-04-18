@@ -133,6 +133,30 @@ nav.nav-center a.active {
   background-color: var(--primary);
 }
 
+/* ========== consult ========== */
+.consult-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #0c2c55;
+  color: #ffffff;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.consult-button:hover {
+  background-color: #154377;
+  transform: translateY(-2px);
+}
+
+
 /* ========== Carousel ========== */
 .carousel {
   position: relative;
