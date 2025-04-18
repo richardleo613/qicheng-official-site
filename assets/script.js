@@ -10,13 +10,19 @@ window.onload = function () {
   applyLanguage(savedLang);
 };
 
-// 语言切换逻辑：遍历所有支持切换的标签
+// 语言切换逻辑：遍历所有支持切换的标签，包括 title
 function applyLanguage(lang) {
   const elements = document.querySelectorAll("[data-en]");
   elements.forEach(el => {
-    el.innerText = el.getAttribute(`data-${lang}`);
+    // 特殊处理 <title> 标签
+    if (el.tagName.toLowerCase() === "title") {
+      document.title = el.getAttribute(`data-${lang}`);
+    } else {
+      el.innerText = el.getAttribute(`data-${lang}`);
+    }
   });
 }
+
 
 // 🎠 无限正向轮播图逻辑
 let currentIndex = 0;
