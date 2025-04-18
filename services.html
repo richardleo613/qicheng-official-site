@@ -11,140 +11,122 @@
 </head>
 <body>
 
-<!-- Header -->
-<header>
-  <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
-  </a>    
-  <nav class="nav-center">
-    <a href="index.html" data-en="Home" data-zh="首页">Home</a>
-    <a href="services.html" data-en="Services" data-zh="服务" class="active">Services</a>
-    <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
-  </nav>
-  <div class="lang-dropdown" onclick="toggleLangMenu()">
-    <span class="lang-icon">&#127760;</span>
-    <div class="lang-menu" id="langMenu">
-      <div onclick="setLanguage('zh')">中文</div>
-      <div onclick="setLanguage('en')">English</div>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Qicheng Logo" style="height: 48px;" />
+    </a>    
+    <nav class="nav-center">
+      <a href="index.html" data-en="Home" data-zh="首页">Home</a>
+      <a href="services.html" data-en="Services" data-zh="服务" class="active">Services</a>
+      <a href="about.html" data-en="About Us" data-zh="关于我们">About Us</a>
+    </nav>
+    <div class="lang-dropdown" onclick="toggleLangMenu()">
+      <span class="lang-icon">&#127760;</span>
+      <div class="lang-menu" id="langMenu">
+        <div onclick="setLanguage('zh')">中文</div>
+        <div onclick="setLanguage('en')">English</div>
+      </div>
+    </div>      
+  </header>
+
+  <!-- 服务标题 -->
+  <section class="section section-title">
+    <h2 data-en="Our Services" data-zh="我们的服务">我们的服务</h2>
+  </section>
+
+  <!-- 四大服务展示模块 -->
+  <section class="section service-grid">
+    <div class="service-card" data-aos="fade-up" id="company">
+      <a href="service-company.html" class="service-link">
+        <div class="service-header">
+          <span data-en="Company Registration" data-zh="公司注册">公司注册</span>
+        </div>
+        <img src="images/service1.png" alt="Company Registration">
+      </a>
     </div>
-  </div>      
-</header>
 
-<!-- 服务大标题 -->
-<section class="section section-title">
-  <h2 data-en="Our Services" data-zh="我们的服务">我们的服务</h2>
-</section>
+    <div class="service-card" data-aos="fade-up" id="visa">
+      <a href="service-visa.html" class="service-link">
+        <div class="service-header">
+          <span data-en="Visa Services" data-zh="签证业务">签证业务</span>
+        </div>
+        <img src="images/service2.png" alt="Visa Services">
+      </a>
+    </div>
 
-<!-- 四大服务展示模块 -->
-<section class="section service-grid" style="padding-top: 4rem;">
-  <div class="service-card" data-aos="fade-right" id="company">
-    <a href="service-company.html" class="service-link">
-      <div class="service-header">
-        <span data-en="Company Registration" data-zh="公司注册">公司注册</span>
-      </div>
-      <img src="images/service1.png" alt="Company Registration">
-    </a>
-  </div>
+    <div class="service-card" data-aos="fade-up" id="qualification">
+      <a href="service-qualification.html" class="service-link">
+        <div class="service-header">
+          <span data-en="Industry Qualifications" data-zh="行业资质">行业资质</span>
+        </div>
+        <img src="images/service3.png" alt="Industry Qualifications">
+      </a>
+    </div>
 
-  <div class="service-card" data-aos="fade-left" id="visa">
-    <a href="service-visa.html" class="service-link">
-      <div class="service-header">
-        <span data-en="Visa Services" data-zh="签证业务">签证业务</span>
-      </div>
-      <img src="images/service2.png" alt="Visa Services">
-    </a>
-  </div>
+    <div class="service-card" data-aos="fade-up" id="tax">
+      <a href="service-tax.html" class="service-link">
+        <div class="service-header">
+          <span data-en="Tax Consulting" data-zh="财税咨询">财税咨询</span>
+        </div>
+        <img src="images/service4.png" alt="Tax Consulting">
+      </a>
+    </div>
+  </section>
 
-  <div class="service-card" data-aos="fade-right" id="qualification">
-    <a href="service-qualification.html" class="service-link">
-      <div class="service-header">
-        <span data-en="Industry Qualifications" data-zh="行业资质">行业资质</span>
-      </div>
-      <img src="images/service3.png" alt="Industry Qualifications">
-    </a>
-  </div>
+  <!-- 服务地区标题 -->
+  <section class="section section-title">
+    <h2 data-en="Our Service Regions" data-zh="服务覆盖地区">服务覆盖地区</h2>
+  </section>
 
-  <div class="service-card" data-aos="fade-left" id="tax">
-    <a href="service-tax.html" class="service-link">
-      <div class="service-header">
-        <span data-en="Tax Consulting" data-zh="财税咨询">财税咨询</span>
-      </div>
-      <img src="images/service4.png" alt="Tax Consulting">
-    </a>
-  </div>
-</section>
-
-<!-- 服务覆盖地区标题部分 -->
-<section class="section section-title">
-  <h2 data-en="Our Service Regions" data-zh="服务覆盖地区">服务覆盖地区</h2>
-</section>
-
-<!-- 服务覆盖地区卡片展示区域 -->
-<section class="section">
-  <div class="service-region-grid">
-    <!-- 国家卡片 8 个 -->
+  <!-- 服务国家模块 -->
+  <section class="section">
     <div class="service-region-grid">
-
       <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-indonesia.jpg" alt="Indonesia">
         <p data-en="Indonesia" data-zh="印尼">印尼</p>
       </div>
-    
-      <div class="region-card" data-aos="flip-left">
+      <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-malaysia.jpg" alt="Malaysia">
         <p data-en="Malaysia" data-zh="马来西亚">马来西亚</p>
       </div>
-    
       <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-thailand.jpg" alt="Thailand">
         <p data-en="Thailand" data-zh="泰国">泰国</p>
       </div>
-    
-      <div class="region-card" data-aos="flip-right">
+      <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-japan.jpg" alt="Japan">
         <p data-en="Japan" data-zh="日本">日本</p>
       </div>
-    
       <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-philippines.jpg" alt="Philippines">
         <p data-en="Philippines" data-zh="菲律宾">菲律宾</p>
       </div>
-    
-      <div class="region-card" data-aos="flip-left">
+      <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-singapore.jpg" alt="Singapore">
         <p data-en="Singapore" data-zh="新加坡">新加坡</p>
       </div>
-    
       <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-norway.jpg" alt="Norway">
         <p data-en="Norway" data-zh="挪威">挪威</p>
       </div>
-    
-      <div class="region-card" data-aos="flip-right">
+      <div class="region-card" data-aos="zoom-in-up">
         <img src="images/region-denmark.jpg" alt="Denmark">
         <p data-en="Denmark" data-zh="丹麦">丹麦</p>
       </div>
-    
     </div>
-    
-  </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
+      © 2025 启程出海 版权所有
+    </p>
+  </footer>
 
-<!-- Footer -->
-<footer>
-  <p data-en="© 2025 Qicheng. All rights reserved." data-zh="© 2025 启程出海 版权所有">
-    © 2025 启程出海 版权所有
-  </p>
-</footer>
-
-<!-- 脚本最后引入 AOS -->
-<script src="assets/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ once: true });
-</script>
-
+  <!-- 脚本 -->
+  <script src="assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
 </body>
 </html>
-
