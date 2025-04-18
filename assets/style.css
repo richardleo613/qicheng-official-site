@@ -162,7 +162,7 @@ nav.nav-center a.active {
 .icon-headset {
   width: 22px;
   height: 22px;
-  background-image: url("images/icon-headset.png");
+  background-image: url("../images/icon-headset.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
