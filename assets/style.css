@@ -204,19 +204,34 @@ nav.nav-center a:hover {
 }
 
 .card {
-  background-color: var(--card-bg);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.85);       /* 半透明白底 */
+  backdrop-filter: blur(8px);                 /* 毛玻璃 */
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);   /* 阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);   /* 悬浮增强阴影 */
 }
 
 /* 关于我们区域专用 */
 .about-section {
-  background-color: var(--card-bg);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.85);       /* 半透明白底 */
+  backdrop-filter: blur(8px);                 /* 毛玻璃 */
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);   /* 阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
+}
+
+.about-section:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);   /* 悬浮增强阴影 */
 }
 
 .about-text p, .about-text h2 {
@@ -287,9 +302,20 @@ img {
 }
 
 .about-section {
-  background-color: var(--card-bg);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.85);       /* 半透明白底 */
+  backdrop-filter: blur(8px);                 /* 毛玻璃 */
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);   /* 阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
 }
+
+.about-section:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);   /* 悬浮增强阴影 */
+}
+
 .about-text p, .about-text h2 {
   color: #ffffff;
 }
@@ -334,16 +360,18 @@ img {
 }
 
 .service-card {
-  background-color: var(--card-bg); /* 深蓝背景 */
-  border: none;
+  background: rgba(255, 255, 255, 0.85);       /* 半透明白底 */
+  backdrop-filter: blur(8px);                 /* 毛玻璃 */
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 12px;
-  box-shadow: 0 4px 12px var(--card-shadow);
-  color: #ffffff;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);   /* 阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
 }
 
 .service-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);   /* 悬浮增强阴影 */
 }
 
 .service-link {
@@ -656,5 +684,49 @@ nav.nav-center a.active {
 
 .submenu {
   display: none;
+}
+
+/* === 关于启程 & 服务优势的左右结构 === */
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.flex-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 移动端自适应 */
+@media (max-width: 768px) {
+  .flex-row,
+  .flex-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* === 卡片/模块通用白底玻璃风格 + 悬浮反馈 === */
+.card,
+.service-card,
+.about-section,
+.advantages-section {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
+}
+
+.card:hover,
+.service-card:hover,
+.about-section:hover,
+.advantages-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
