@@ -212,7 +212,17 @@ nav.nav-center a.active {
 }
 
 .card,
-.service-card,
+
+.service-card {
+  width: 22%;
+  min-width: 220px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
 .about-section,
 .advantages-section {
   background: var(--card-bg);
