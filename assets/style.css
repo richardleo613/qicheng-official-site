@@ -542,9 +542,7 @@ html {
 
 /* ========== Service Highlights Section ========== */
 .service-highlights {
-  background-color: #0c2c55; /* 深蓝色背景 */
   padding: 3rem 1.5rem;
-  color: #fff;
   text-align: center;
 }
 
@@ -563,7 +561,6 @@ html {
 }
 
 .highlight-card {
-  background: #ffffff;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -579,12 +576,23 @@ html {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #fff; /* 白色字体 */
 }
 
-.highlight-text p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.5;
+.highlight-card.highlight-1 {
+  background-color: #0c2c55; /* 深蓝色 */
+}
+
+.highlight-card.highlight-2 {
+  background-color: #2d5caa; /* 蓝色 */
+}
+
+.highlight-card.highlight-3 {
+  background-color: #154377; /* 海蓝色 */
+}
+
+.highlight-card.highlight-4 {
+  background-color: #1071b9; /* 靛蓝色 */
 }
 
 @media (max-width: 768px) {
@@ -594,9 +602,5 @@ html {
 
   .highlight-text h3 {
     font-size: 1.4rem;
-  }
-
-  .highlight-text p {
-    font-size: 0.9rem;
   }
 }
