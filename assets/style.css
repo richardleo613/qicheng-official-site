@@ -547,7 +547,7 @@ html {
 }
 
 .service-highlights h2 {
-  font-size: 2.4rem;
+  font-size: 2.2rem; /* 统一字体大小，确保和主页一致 */
   font-weight: 600;
   margin-bottom: 2rem;
   color: var(--accent); /* 使用主页的深蓝色 */
@@ -575,10 +575,10 @@ html {
 }
 
 .highlight-text h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem; /* 字体大小恢复到主页的一致大小 */
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text); /* 使用默认文字颜色 */
+  color: var(--text); /* 使用默认文字颜色，保持与主页一致 */
 }
 
 .highlight-card.highlight-1 {
@@ -610,3 +610,4 @@ html {
     font-size: 1.4rem;
   }
 }
+
