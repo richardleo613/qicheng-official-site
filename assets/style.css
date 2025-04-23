@@ -670,6 +670,7 @@ html {
   .about-page .about-text h2 {
     font-size: 1.8rem; /* 小屏设备上字体略小 */
   }
+}
 
 /* ========== About Section ========== */
 .about-section {
@@ -708,5 +709,4 @@ html {
   .about-text p {
     font-size: 0.95rem; /* Smaller text on smaller screens */
   }
-}
 }
