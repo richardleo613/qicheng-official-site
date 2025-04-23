@@ -670,15 +670,19 @@ html {
   .about-page .about-text h2 {
     font-size: 1.8rem; /* 小屏设备上字体略小 */
   }
-}/* ========== About Section ========== */
+  
+/* ========== About Section ========== */
 .about-section {
   padding: 4rem 2rem;
   text-align: center; /* Center the text */
   background-color: #f9f9f9; /* Light background for readability */
+  display: flex;
+  justify-content: center; /* Center the section */
+  align-items: center; /* Vertically center content */
 }
 
 .about-text {
-  max-width: 800px; /* Limit text width for better readability */
+  max-width: 900px; /* Limit text width for better readability */
   margin: 0 auto; /* Center the text block */
   font-size: 1.1rem;
   color: #333; /* Dark text for good contrast */
@@ -691,7 +695,6 @@ html {
   color: #0c2c55; /* Accent color for the title */
   margin-bottom: 1.5rem;
   text-align: center;
-  padding: 0 1rem;
 }
 
 .about-text p {
@@ -709,5 +712,4 @@ html {
   .about-text p {
     font-size: 0.95rem; /* Smaller text on smaller screens */
   }
-}
-
+}}
