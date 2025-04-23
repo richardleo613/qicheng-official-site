@@ -672,41 +672,41 @@ html {
   }
 }
 
-/* ========== About Section ========== */
-.about-section {
+/* ========== Our Story Section ========== */
+.our-story-section {
   padding: 4rem 2rem;
   text-align: center; /* Center the text */
-  background-color: #f9f9f9; /* Light background for readability */
+  background-color: #ffffff; /* White background */
 }
 
-.about-text {
-  max-width: 900px; /* Limit text width for better readability */
+.our-story-text {
+  font-size: 1.1rem; /* Match the text size with About Us */
+  color: #333333; /* Dark text for good contrast */
+  line-height: 1.8; /* Same line height as About Us */
   margin: 0 auto; /* Center the text block */
-  font-size: 1.1rem;
-  color: #333; /* Dark text for good contrast */
-  line-height: 1.8;
+  max-width: 900px; /* Ensure consistent width with About Us */
+  padding: 0 1rem; /* Add padding for good spacing */
 }
 
-.about-text h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #0c2c55; /* Accent color for the title */
+.our-story-text h2 {
+  font-size: 2.2rem; /* Matching title size with About Us */
+  font-weight: 700; /* Strong title weight */
+  color: #2d5caa; /* Blue for the title */
   margin-bottom: 1.5rem;
 }
 
-.about-text p {
-  font-size: 1rem;
-  color: #555; /* Slightly lighter color for the body text */
+.our-story-text p {
+  font-size: 1rem; /* Same body text size */
+  color: #555555; /* Lighter color for the body text */
   margin-bottom: 2rem;
-  padding: 0 1rem;
-  text-align: justify; /* Justified text for a neat look */
+  text-align: justify; /* Justified text */
 }
 
 @media (max-width: 768px) {
-  .about-text h2 {
+  .our-story-text h2 {
     font-size: 1.8rem; /* Slightly smaller title on smaller screens */
   }
-  .about-text p {
+  .our-story-text p {
     font-size: 0.95rem; /* Smaller text on smaller screens */
   }
 }
